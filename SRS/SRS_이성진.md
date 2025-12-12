@@ -1,249 +1,275 @@
-# 📚 Software Requirements Specification (SRS)
+# Software Requirements Specification (SRS) & System Testing
 
-## 프로젝트 정보
+## Project title
 
-* **Project Title (프로젝트 제목)**: Let's study now! 
-* **Project Description (프로젝트 설명)**:
-    > 많은 사람들은 혼자 공부할 때 집중이 잘 되지 않거나 꾸준함을 유지하기 어려운 경험을 해본 적이 있을 것이다. 본 프로젝트는 이러한 학습자들의 필요에 부합하는 실시간 스터디 그룹 매칭 웹사이트를 개발하는 것이다. 개발할 웹사이트는 기본적인 사용자 관리 기능(회원가입, 로그인, 프로필 관리)과 더불어 오픈 스터디 참여, 그룹 스터디 매칭, URL 공유를 통한 친구 초대 등 다양한 스터디 참여 방식을 지원한다. 실제 스터디 분위기를 온라인에서도 재현한다. 이외에도 체크리스트, 디데이, 학습 기록 조회 및 달성률 확인 기능을 통해 학습 관리와 성취감을 동시에 지원한다. 
+**Let's Study Now**
 
-## 팀원 (Team Members)
+## Project description
 
-| 학생 ID (Student ID) | 이름 (Name) |
-|:---:|:---:|
-| 22112131 | 이성진 |
-| 22112014 | 김연웅 |
-| 22112087 | 류승래 |
-| 22311936 | 박다민 |
-| 22311942 | 김주영 |
-| 22313547 | 류다영 |
+실시간 스터디 관리 및 협업 플랫폼
 
-### 요구사항 정의 (Requirements description)
 
-| ID | 업무명 (기능) (Function name) | 요약 (Summary of the function) | 세부요구사항 설명 (서술식) (predicative summary of the function) | 우선순위 (Priority) (High, Medium, Low) |
-|:---|:---|:---|:---|:---|
-| 1 | **로그인** | | | |
-| 1.1 | | 사용자는 아이디와 비밀번호를 입력하여 시스템에 로그인함 | | |
-| 1.1.1 | | | 아이디와 비밀번호 입력란이 비어있을 경우, 사용자에게 "아이디와 비밀번호를 입력하세요" 라는 메시지를 표시한다. | H |
-| 1.1.2 | | | 아이디 비밀번호가 일치하지 않을 경우, 사용자에게 "아이디와 비밀번호가 올바르지 않습니다'라는 메시지를 표시한다. | H |
-| 1.1.3 | | | 로그인 버튼을 클릭하면 입력된 아이디와 비밀번호를 기반으로 사용자 인증을 수행한다. | H |
-| 1.1.4 | | | 로그인 성공 시, 사용자를 메인 페이지 또는 지정된 페이지로 리디렉션 한다. | H |
-| 1.1.5 | | | 로그인 처리 시간은 2초 이내여야 한다. | M |
-| 2 | **회원가입** | | | |
-| 2.1 | | 회원가입에 필요한 필수 정보를 입력한다. | | |
-| 2.1.1 | | | 아이디는 고유한 아이디를 생성해야 하며, 중복 될 수 없다. 중복시 다른 아이디를 입력 받도록 한다. | H |
-| 2.1.2 | | | 비밀번호는 별도의 중복 검증 없이 입력받는다. | H |
-| 2.1.3 | | | 이메일은 유효한 이메일 주소를 입력해야 한다. 이메일 주소 형식이 올바르지 않을 경우 다른 이메일 주소를 받도록 한다. | H |
-| 2.1.4 | | | 중복된 이메일을 입력했을 경우, 다른 이메일 주소를 받도록 한다. | H |
-| 2.1.5 | | | 사용자는 자신의 나이를 선택하여 표기하도록 한다. | H |
-| 2.1.6 | | | 프로필 사진을 업로드 할 수 있어야한다. | H |
-| 2.2 | | 회원가입을 할때 선택적으로 정보를 입력한다. | | |
-| 2.2.1 | | | 사용자의 나이를 입력해야 한다. | M |
-| 2.2.2 | | | 사용자는 이미지 파일을 선택하여 프로필 사진을 업로드 할 수 있어야한다. | M |
-| 2.2.3 | | | 사용자가 프로필 사진을 업로드 하지 않으면 기본이미지로 설정되어 있어야한다. | M |
-| 2.2.4 | | | 사용자는 관심 있는 공부 분야를 선택할 수 있어야한다. | M |
-| 2.2.5 | | | 사용자는 최대 200자 이내로 자신을 소개하는 글을 작성할 수 있어야한다. | M |
-| 3 | **프로필 사진 업로드** | | | |
-| 3.1 | | 사용자가 프로필 사진을 등록/변경할 수 있음 | | |
-| 3.1.1 | | | 사용자는 이미지 파일을 선택하여 프로필 사진을 등록하거나 변경한다. | H |
-| 3.1.2 | | | 사용자가 프로필 사진을 등록하지 않았거나, 사진을 삭제했을 경우 프로필은 기본이미지로 표시된다. | H |
-| 3.1.3 | | | 업로드 시 미리보기 기능을 제공한다. | H |
-| 3.1.4 | | | 지원하는 파일 형식은 jpg, png, gjf이다. | H |
-| 3.1.5 | | | 잘못된 확장자 파일은 업로드 불가 안내 메시지를 출력한다. | M |
-| 4 | **아이디/나이/이메일 표시** | | | |
-| 4.1 | | 기본 회원 정보를 표시함. | | |
-| 4.1.1 | | | 사용자의 기본 정보(아이디, 나이, 이메일)를 화면에 표시한다. | H |
-| 4.1.2 | | | 수정은 불가하고, 확인만 가능하다. (필요 시 "계정 설정"에서 변경) | H |
-| 5 | **공부 분야 선택** | | | |
-| 5.1 | | 사용자가 자신의 관심있는 분야를 선택 | | |
-| 5.1.1 | | | 사용자가 관심있는 분야를 선택할 수 있다. 선택 UI는 드롭다운 또는 체크박스 형태로 제공된다. | H |
-| 5.1.2 | | | 최소 1개 이상, 최대 5개까지 선택이 가능하다. | M |
-| 6 | **자기소개 작성** | | | |
-| 6.1 | | 사용자가 자기소개를 작성/수정 가능 | | |
-| 6.1.1 | | | 사용자가 자기소개를 입력/수정할 수 있다. | H |
-| 6.1.2 | | | 입력 제한은 최대 200자 까지 이다. | M |
-| 6.1.3 | | | 저장 시 특수문자 필터링을 적용한다. | M |
-| 6.1.4 | | | 빈 값 입력 시 "자기소개를 입력하세요" 안내 메시지를 출력한다. | M |
-| 7 | **비밀번호 변경** | | | |
-| 7.1 | | 비밀번호를 변경할 수 있다. | | |
-| 7.1.1 | | | 사용자는 현재 비밀번호를 입력하고 새 비밀번호로 변경할 수 있다. | H |
-| 7.1.2 | | | 새 비밀번호는 최소 8자 이상, 영문+숫자 조합 필수. | H |
-| 7.1.3 | | | 비밀번호 확인 입력란을 두어 두 입력이 일치해야 변경 완료된다. | H |
-| 7.1.4 | | | 잘못된 입력 시 “비밀번호 형식 오류” 또는 “비밀번호 불일치” 메시지를 출력해야 한다 | M |
-| 8 | **이메일 변경** | | | |
-| 8.1 | | 이메일 주소를 변경할 수 있다. | | |
-| 8.1.1 | | | 사용자는 이메일 주소를 변경할 수 있다. | H |
-| 8.1.2 | | | 이메일 입력은 aaa@bbb.com 형식 검증을 거친다. | H |
-| 9 | **아이디 변경** | | | |
-| 9.1 | | 아이디를 변경할 수 있다. | | |
-| 9.1.1 | | | 아이디는 최소 2자, 최대 12자 이내에 변경할 수 있다. | H |
-| 9.1.2 | | | 특수문자(@, #, %)등)는 허용하지 않는다. | H |
-| 9.1.3 | | | 중복 아이디 입력 시 "이미 사용 중인 아이디" 메시지를 출력한다. | H |
-| 10 | **계정 탈퇴** | | | |
-| 10.1 | | 계정을 탈퇴할 수 있다. | | |
-| 10.1.1 | | | 사용자는 "계정 탈퇴" 버튼을 통해 계정을 삭제할 수 있다. | H |
-| 10.1.2 | | | 탈퇴 시 반드시 비밀번호 확인 절차가 있어야 한다. | H |
-| 10.1.3 | | | 탈퇴 완료 시 계정 정보 및 데이터는 DB에서 삭제되며, 복구가 불가능하다는 안내 메시지를 제공한다. | H |
-| 10.1.4 | | | 탈퇴 직후 로그인 화면으로 리다이렉트된다. | M |
-| 11 | **알림 설정** | | | |
-| 11.1 | | 알림을 키고 끌 수 있다. | | |
-| 11.1.1 | | | 사용자는 알림 수신 여부(이메일, 푸시 알림 등)를 ON/OFF로 선택할 수 있다. | H |
-| 11.1.2 | | | 기본값은 ON 상태이다. | H |
-| 11.1.3 | | | 저장 후 “알림 설정이 변경되었습니다” 메시지를 출력한다. | M |
-| 12 | **오픈 스터디 방 만들기** | | | |
-| 12.1 | | 사용자가 설정한 조건에 따라 새로운 오픈 스터디 방을 생성한다. | | |
-| 12.1.1 | | | 사용자는 '방 만들기' 버튼을 통해 오픈 스터디 방 생성 페이지로 진입한다. | H |
-| 12.1.2 | | | 사용자는 해당 방에 입장할 수 있는 인원 수를 2~10명 내외로 설정해야 한다. | H |
-| 12.1.3 | | | 사용자는 해당 방 참여자들의 공부 분야를 선택해야 한다. | H |
-| 12.1.4 | | | 사용자는 해당 방의 제목을 1자~30자 내외로 입력해야 한다. | H |
-| 12.1.5 | | | 사용자는 해당 방에 대한 설명을 입력할 수 있다. | M |
-| 12.1.6 | | | 사용자가 필수 항목(인원, 공부 분야, 방제목)을 전부 설정하지 않으면 생성 버튼이 활성화 되지 않는다. | H |
-| 12.1.7 | | | 사용자가 생성 버튼을 클릭 시 방 목록에 즉시 표시된다. | M |
-| 13 | **오픈 스터디 방 목록** | | | |
-| 13.1 | | 현재 생성된 모든 오픈 스터디 방의 목록을 표시한다. | | |
-| 13.1.1 | | | 각 방의 정보들(방 제목, 현재인원/최대인원, 공부 분야)과 방 참여 버튼을 카드 형식으로 표시한다. | H |
-| 13.1.2 | | | 실시간으로 목록을 업데이트 한다. | H |
-| 14 | **오픈 스터디 방 참여** | | | |
-| 14.1 | | 오픈 스터디 방에 참여한다. | | |
-| 14.1.1 | | | 오픈 스터디 방 목록에서 방 참여 버튼을 클릭하여 해당 방으로 이동한다. | H |
-| 14.1.2 | | | 방 생성자가 설정한 최대 인원에 도달 시 해당 방의 참여버튼은 비활성화된다. | H/M |
-| 14.1.3 | | | 방 입장 시, 해당 방의 현재 인원 수는 자동으로 증가한다. | H/M |
-| 14.1.4 | | | 다른 사용자와 동시 접속 중 다른 사용자의 선입장으로 해당 방의 정원이 꽉 찼을 경우, 에러 메세지를 출력한다. | H/M |
-| 14.1.5 | | | 이미 다른 스터디룸에 참여 중일 경우, 에러 메세지를 출력한다. | H/M |
-| 14.1.6 | | | 이미 삭제된 방에 입장할 경우, 에러 메세지 출력 및 목록을 새로고침한다. | H |
-| 15 | **오픈 스터디 방 삭제** | | | |
-| 15.1 | | 참여자가 없는 방을 자동으로 삭제한다. | | |
-| 15.1.1 | | | 사용자가 방을 생성하고 5분동안 다른 참여자가 없을 시, 방 생성자에게 '5분동안 다른 참여자가 없어 방이 삭제됩니다.' 안내 메시지를 출력하고, 자동으로 방 삭제 및 방 목록에서 즉시 삭제된다. | H |
-| 15.1.2 | | | 방 참여자가 1명이 됐을 경우(생성자 외 다른 사용자), 해당 참여자에게 '방 참여자가 2명 미만이 되어 5분 후 방을 삭제합니다.' 안내 메시지를 출력하고, 자동으로 방 삭제 및 방 목록에서 즉시 삭제된다. | H |
-| 15.1.3 | | | 방 참여자가 모두 나간 방(빈 방)은 5분 후 자동으로 삭제되며, 방 목록에서 즉시 삭제된다. | H |
-| 15.1.4 | | | 5분 타이머가 진행 중 다른 사용자가 참여를 시도할 시, 해당 사용자에게 '곧 삭제될 방입니다. 다른 방을 이용해 주세요.' 안내 메시지를 출력한다. | H |
-| 16 | **공통 에러 처리** | | | |
-| 16.1 | | 모든 기능에서 공통적으로 발생하는 에러를 처리한다. | | |
-| 16.1.1 | | | 네트워크 오류, 서버 오류, 타임아웃, 권한 오류 발생 시 에러 메세지를 출력한다. | H |
-| 17 | **그룹 스터디 방 생성 및 종료** | | | |
-| 17.1 | | 사용자가 직접 그룹 스터디 방을 생성하고 스터디 방의 종료 기능이다. | | |
-| 17.1.1 | | | 사용자는 '방 만들기' 버튼을 통해 스터디룸 생성 페이지로 진입할 수 있다. | H |
-| 17.1.2 | | | 사용자는 스터디 룸의 인원 수를 2명에서 10명 사이로 설정할 수 있다. | H |
-| 17.1.3 | | | 사용자는 공부 분야(예: 프로그래밍, 영어, 자격증 등)를 선택해야 한다. | H |
-| 17.1.4 | | | 사용자는 공부 시간을 최소 1시간부터 최대 5시간까지 1시간 단위로 설정할 수 있다. | H |
-| 17.1.5 | | | 방 생성자는 방의 이름을 설정할 수 있으며, 입력하지 않을 경우 알림 메세지를 출력한다. | M |
-| 17.1.6 | | | 방 생성자는 자신이 속한 그룹 목록 중에서 스터디를 진행할 그룹을 선택하지 않을 시, 에러 메세지를 출력한다. | M |
-| 17.1.7 | | | 필수 정보(그룹 선택, 공부 시간 등)를 모두 입력하지 않으면 에러 메세지를 출력한다. | M |
-| 17.1.8 | | | 방 만들기에 성공하면, 생성자는 자동으로 해당 룸에 입장한다. | M |
-| 17.1.9 | | | 방 생성자가 설정한 공부 시간이 종료되면, 해당 스터디는 종료되어 모든 사용자는 자동으로 퇴장된다. | M |
-| 18 | **그룹 생성 및 삭제** | | | |
-| 18.1 | | 사용자가 그룹을 생성하고, 더 이상 활동하지 않는 그룹을 삭제할 수 있는 기능이다. | | |
-| 18.1.1 | | | 사용자는 '그룹 만들기’ 버튼을 통해 새로운 그룹을 생성할 수 있다. | H |
-| 18.1.2 | | | 그룹 생성 시, 사용자는 그룹 이름을 필수로 입력해야 하며, 그룹 이름을 입력하지 않을 시, 에러 메세지를 출력한다. | H |
-| 18.1.3 | | | 그룹을 생성한 사용자는 자동을 해당 그룹의 ‘방장’의 권한을 가진다. | H |
-| 18.1.4 | | | 방장은 ‘그룹 삭제’ 버튼을 클릭하여 그룹을 영구적으로 삭제할 수 있다. | H |
-| 18.1.5 | | | 그룹을 삭제하기 전에 ‘그룹을 삭제하면 모든 활동 내역이 사라집니다. 정말 삭제하시겠습니까?’와 같은 확인 절차를 거친다. | M |
-| 18.1.6 | | | 그룹 삭제는 그룹 내 방장 외에 다른 멤버가 없는 경우만 가능하다. | M |
-| 19 | **그룹 멤버 확인** | | | |
-| 19.1 | | 그룹 멤버를 확인할 수 있고 방장이 외부 사용자를 URL 링크를 통해 초대할 수 있으며 그룹 내 사용자를 추방할 수 있는 기능이다. | | |
-| 19.1.1 | | | 그룹 멤버 페이지에서 방장은 ‘초대 링크 복사’ 버튼을 누르면 해당 그룹의 고유한 초대 URL이 클립보드에 복사된다. | M |
-| 19.1.2 | | | 초대 링크를 통해 접속했으나 로그인 상태가 아닌 경우, 로그인 페이지로 이동시킨다. | H |
-| 19.1.3 | | | 로그인을 완료하면, 시스템은 사용자를 초대된 그룹에 자동으로 멤버로 추가시 처리한다. | H |
-| 19.1.4 | | | 초대 링크를 통해 접속했으며 이미 로그인 상태인 경우, 별도 절차 없이 해당 그룹에 바로 추가한다. | M |
-| 19.1.5 | | | 이미 해당 그룹의 멤버인 사용자가 초대 링크를 통해 접속할 경우, 별도 절차 없이 그룹 멤버 페이지로 바로 이동시킨다. | M |
-| 19.1.6 | | | 그룹 멤버 리스트에서 현재 소속된 그룹 멤버들의 목록이 표시된다. | H |
-| 19.1.7 | | | 방장은 각 멤버 목록 옆에 있는 ‘추방’ 버튼을 클릭하여 해당 멤버를 그룹에서 제외시킬 수 있다. | H |
-| 19.1.8 | | | 멤버를 추방하기 전에 ‘정말로 추방하시겠습니까?’와 같은 확인 절차를 거친다. | M |
-| 19.1.9 | | | 추방된 사용자는 더 이상 해당 그룹의 스터디에 참여하거나 그룹 스터디 페이지에 접근 할 수 없다. | M |
-| 20 | **그룹 스터디 목록** | | | |
-| 20.1 | | 자신이 소속된 그룹의 스터디 방 목록을 확인하는 기능이다. | | |
-| 20.1.1 | | | 사용자는 자신이 소속된 그룹의 스터디 목록만을 볼 수 있다. | H |
-| 20.1.2 | | | 각 스터디 카드에는 스터디를 개설한 그룹명, 방 이름, 현재 참여 인원/최대 인원, 남은 시간이 표시된다. | H |
-| 20.1.3 | | | 사용자가 여러 그룹에 속해 있을 경우, 그룹별로 스터디 목록을 구분하여 볼 수 있는 필터 기능을 제공한다. | M |
-| 20.1.4 | | | 참여 인원이 최대 인원에 도달한 경우 '입장 불가'라는 메세지를 출력한다. | M |
-| 21 | **그룸 스터디 참여 및 종료** | | | |
-| 21.1 | | 자신이 속한 그룹 스터디에 입장 및 퇴장하는 기능이다. | | |
-| 21.1.1 | | | 사용자는 '그룹 스터디 목록' 에서 '입장' 버튼을 클릭하여 스터디룸에 참여할 수 있다. | H |
-| 21.1.2 | | | 해당 그룹의 멤버가 아닌 외부 사용자가 부적절한 방법으로 스터디 방을 접근 시, 해당 접근을 막고 에러 메세지를 출력한다. | H |
-| 21.1.3 | | | 방 생성자가 설정한 공부 시간이 종료되면, 해당 스터디는 종료되어 모든 사용자는 자동으로 퇴장된다. | M |
-| 21.1.4 | | | 방 참여 시, 네트워크 연결이 불안정할 경우 "연결에 실패했습니다."라는 에러 메세지를 출력한다. | L |
-| 21.1.5 | | | 방 생성자가 설정한 최대 인원 도달 시 해당 방의 참여 버튼을 비활성화 한다. | L |
-| 22 | **화상연결** | | | |
-| 22.1 | | 스터디룸 사용자들이 카메라를 통해 서로의 모습을 실시간으로 공유할 수 있도록 연결하거나 해제하는 기능이다. | | |
-| 22.1.1 | | | 사용자는 스터디룸 내에서 버튼을 눌러 자신의 카메라를 켜거나 끌 수 있다. | H |
-| 22.1.2 | | | 시스템은 사용자의 카메라 상태(ON/OFF)를 다른 참여자에게 실시간으로 반영해야 한다. | H |
-| 22.1.3 | | | 사용자가 스터디룸 입장시, 시스템은 카메라의 기본값을 OFF로 설정한다. | M |
-| 22.1.4 | | | 사용자의 카메라가 OFF 상태일 경우, 시스템은 사용자의 닉네임과 프로필사진을 꺼진 화면에 표시한다. | H |
-| 23 | **참여자 목록 확인** | | | |
-| 23.1 | | 현재 스터디룸에 접속해 있는 사용자들의 정보를 확인하는 기능이다. | | |
-| 23.1.1 | | | 시스템은 현재 스터디룸에 접속한 모든 사용자의 닉네임, 프로필, 공부/휴식상태, 상태메시지를 표시해야 한다. | H |
-| 23.1.2 | | | 해당 스터디룸 내 다른 사용자가 입장하거나 퇴장할 경우, 시스템은 목록을 자동으로 갱신해야 한다. | H |
-| 24 | **참여 시간 확인** | | | |
-| 24.1 | | 스터디룸 내 사용자가 머문 시간을 조회할 수 있는 기능이다. | | |
-| 24.1.1 | | | 시스템은 사용자가 스터디룸에 머문 시간을 표시해야 한다. | H |
-| 25 | **공부/휴식 모드 설정** | | | |
-| 25.1 | | 사용자가 자신의 상태를 공부 또는 휴식으로 전환하여 스터디룸 내 다른 사용자들에게 표시하는 기능이다. | | |
-| 25.1.1 | | | 사용자는 버튼을 눌러 자신의 상태를 공부 모드 또는 휴식 모드로 전환할 수 있다. | H |
-| 25.1.2 | | | 모드 전환 시, 시스템은 참여자 목록에 변경된 정보를 반영해야 한다. | H |
-| 25.1.3 | | | 학습주기 반복 타이머 기능을 사용할 경우, 시스템은 사용자가 설정한 학습 주기에 따라공부/휴식 모드를 전환해야 한다. | H |
-| 26 | **학습주기 반복 타이머 설정** | | | |
-| 26.1 | | 공부 시간과 휴식 시간을 주기로 설정하고 반복 실행하여 학습 리듬을 유지할 수 있도록 돕는 기능이다. | | |
-| 26.1.1 | | | 사용자는 원하는 공부 시간과 휴식 시간을 주기로 설정할 수 있다. | H |
-| 26.1.2 | | | 사용자는 버튼을 통해 타이머를 켜거나 끌 수 있다. | H |
-| 26.1.3 | | | 사용자가 타이머 작동 버튼을 눌렀을 경우, 시스템은 공부 시간을 카운트다운 한다. | H |
-| 26.1.4 | | | 타이머 작동 중 공부 시간이 끝나는 경우, 시스템은 타이머를 휴식 시간으로 자동 전환하여 카운트다운 한다. | H |
-| 26.1.5 | | | 타이머 작동 중 휴식 시간이 끝나는 경우, 시스템은 타이머를 공부 시간으로 자동 전환하여 카운트다운한다. | H |
-| 26.1.6 | | | 사용자가 타이머를 종료하기 전까지 자동전환을 반복한다. | H |
-| 26.1.7 | | | 공부 시간이나 휴식시간으로 전환되는 경우, 시스템은 사용자에게 알림을 보내야 한다. | M |
-| 27 | **상태 메시지 등록** | | | |
-| 27.1 | | 사용자가 현재 기분이나 상황을 간단한 메시지로 입력해 다른 참여자들과 공유하는 기능이다. | | |
-| 27.1.1 | | | 사용자는 입력칸에 상태 메시지를 입력하고 등록 버튼을 누르면 상태메시지를 등록할 수 있다. | H |
-| 27.1.2 | | | 시스템은 사용자가 등록한 상태 메시지를 참여자 목록에 반영해야 한다. | H |
-| 27.1.3 | | | 사용자가 새로운 상태 메시지를 등록할 경우, 시스템은 기존 상태 메시지를 새로 등록한 상태메시지로 교체한다. | H |
-| 27.1.4 | | | 상태 메시지는 텍스트 형식이며, 최대 50자까지 입력할 수 있다. | H |
-| 28 | **스터디룸 나가기** | | | |
-| 28.1 | | 사용자가 스터디룸에서 나갈 수 있는 기능이다. | | |
-| 28.1.1 | | | 사용자는 스터디룸 화면에서 “나가기” 버튼을 선택한다. | H |
-| 28.1.2 | | | 시스템은 사용자에게 스터디룸을 나갈 것인지 확인 메시지를 표시한다. | H |
-| 28.1.3 | | | 사용자는 확인 메시지에서 “확인” 버튼을 선택한다 | H |
-| 28.1.4 | | | 시스템은 사용자를 스터디룸에서 제거하고 메인 페이지로 이동시킨다. | H |
-| 28.1.5 | | | 시스템은 다른 참여자들의 참여자 목록에서 해당 사용자를 제거한다. | H |
-| 29 | **그룹 스터디 남은 시간 표시** | | | |
-| 29.1 | | 그룹 스터디룸에서 스터디룸 생성자가 설정한 목표 공부 시간이 얼마나 남았는지를 실시간으로 확인할 수 있도록 표시하는 기능이다. | | |
-| 29.1.1 | | | 시스템은 그룹 스터디룸 생성 시 설정된 목표 공부 시간을 불러온다. | H |
-| 29.1.2 | | | 시스템은 목표 시간에 따라 카운트다운을 시작한다. | H |
-| 29.1.3 | | | 시스템은 남은 시간을 스터디룸 화면에 실시간으로 표시한다. | H |
-| 29.1.4 | | | 그룹스터디룸에 입장한 사용자는 그룹에 설정된 남은 목표시간을 볼 수 있다. | H |
-| 30 | **사용자 인증 상태** | | | |
-| 30.1 | | 사용자 인증 상태를 나타낸다. | | |
-| 30.1.1 | | | 네비게이션 바는 어느 페이지에 있든 항상 화면 최상단에 고정되어 표시된다. | H |
-| 30.1.2 | | | 사용자가 로그인하지 않았을 경우, 네비게이션 바에는 '로그인'버튼과 '회원가입' 버튼이 표시된다. | H |
-| 30.1.3 | | | 사용자가 로그인했을 경우, '마이페이지'와 '로그아웃' 버튼이 표시된다. | H |
-| 31 | **페이지 이동** | | | |
-| 31.1 | | 페이지 이동이 가능하다. | | |
-| 31.1.1 | | | 로그인 버튼을 클릭하면, 로그인 페이지로 이동한다. | H |
-| 31.1.2 | | | 회원가입 버튼을 클릭하면, 회원가입 페이지로 이동한다. | H |
-| 31.1.3 | | | 로그아웃 버튼을 클릭하면, 인증이 만료된다. | H |
-| 31.1.4 | | | 좌측 상단에 로고를 클릭하면, 메인 페이지로 이동한다. | M |
-| 32 | **체크리스트 생성** | | | |
-| 32.1 | | 사용자가 체크리스트를 만들어 목표를 설정 할 수 있다 | | |
-| 32.1.1 | | | 사용자가 체크리스트를 생성하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | H |
-| 32.1.2 | | | 사용자가 원하는 날짜를 선택하고 생성 버튼을 누르면 체크리스트를 작성하는 창을 연다 | H |
-| 32.1.3 | | | 체크리스트에 한 글자 이상 적혀 있지 않거나 날짜를 선택하지 않고 완료 버튼을 누르면 내용을 입력해주세요 라는 문구를 출력한다 | H |
-| 32.1.4 | | | 체크리스트를 작성하고 완료 버튼을 누르면체크리스트가 추가 되고 날짜를 선택하는 창으로 돌아간다 | H/M |
-| 32.1.5 | | | 체크리스트가 한 개 이상 있는 날짜는 날짜를 빨간색 글자로 나타내 체크리스트가 있는 것을 표시해야 한다 | M |
-| 33 | **체크리스트 수정** | | | |
-| 33.1 | | 사용자가 작성한 체크리스트를 수정할 수 있다 | | |
-| 33.1.1 | | | 사용자가 체크리스트를 수정하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | H |
-| 33.1.2 | | | 사용자가 원하는 날짜를 선택하고 수정 버튼을 누른다 | H |
-| 33.1.3 | | | 사용자가 선택한 날짜에 체크리스트가 한 개 이상 존재하지 않으면 수정할 체크리스트가 없습니다 라는 문구를 출력한다 | M |
-| 33.1.4 | | | 사용자가 수정 버튼을 누르면 체크리스트를 수정하는 창을 띄운다 | H |
-| 33.1.5 | | | 체크리스트를 수정하고 완료 버튼을 누르면 수정된 체크리스트 내용으로 업데이트한다 | H/M |
-| 33.1.6 | | | 체크리스트 내용에 한 글자 이상 존재하지 않으면 내용을 입력해 주세요 라는 문구를 출력한다 | M |
-| 34 | **체크리스트 조회** | | | |
-| 34.1 | | 사용자가 작성한 체크리스트를 조회 할 수 있다 | | |
-| 34.1.1 | | | 사용자가 체크리스트를 조회하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | H |
-| 34.1.2 | | | 사용자가 날짜를 선택하면 오른쪽 화면에 작성된 체크리스트를 출력한다 | H |
-| 34.1.3 | | | 사용자가 선택한 날짜에 체크리스트가 한 개 이상 존재하지 않으면 체크리스트가 없습니다 라는 문구를 출력한다 | M |
-| 35 | **체크리스트 삭제** | | | |
-| 35.1 | | 사용자가 생성한 체크리스트를 삭제 할 수 있다 | | |
-| 35.1.1 | | | 사용자가 체크리스트를 삭제하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | H |
-| 35.1.2 | | | 사용자가 날짜를 선택하면 오른쪽 화면에 작성된 체크리스트를 출력한다 | H |
-| 35.1.3 | | | 사용자가 체크리스트를 삭제하기 위해서는 체크리스트가 한 개 이상 존재해야 한다 | H |
-| 35.1.4 | | | 사용자가 삭제 버튼을 누르면 삭제하는 체크리스트를 선택할 수 있는 창을 띄운다 | H |
-| 35.1.5 | | | 사용자가 삭제할 체크리스트를 한 개 이상 선택하지 않으면 창에서 삭제 버튼이 활성화되지 않는다 | H |
-| 35.1.6 | | | 사용자가 체크리스트를 선택하고 삭제 버튼을 누르면 체크리스트를 삭제한다 | H |
+## Team members
+
+- 22112131: 이성진
+- 22112014: 김연웅
+- 22112087: 류승래
+- 22311936: 박다민
+- 22311942: 김주영
+- 22313547: 류다영
+
+## 1. 요구사항 정의 (Requirements Description)
+
+
+### ID
+
+| ID | 업무명 (기능)<br>(Function name) | 요약<br>(Summary of the function) | 세부요구사항 설명<br>(서술식)<br>(predicative summary of the function) | 입력변수<br>(Input variables to test the function) | 정상 입력값 partitioning<br>(Normal inputs partitioning) | 예외 입력값 partitioning<br>(Exceptional inputs partitioning) | 추적성<br>(Traceability) | 우선순위<br>(Priority)<br>(High, Medium, Low) | 테스트 결과<br>(Test result) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 로그인 |  |  |  |  |  |  | _ |  |
+| 1.1 |  | 사용자는 아이디와 비밀번호를 입력하여 시스템에 로그인함 |  |  |  |  |  | _ |  |
+| 1.1.1 |  |  | 아이디와 비밀번호 입력란이 비어있을 경우, 사용자에게 "아이디와 비밀번호를 입력하세요" 라는 메시지를 표시한다. | email<br>password |  | email="", password="" |  | LoginDto.java, GlobalExceptionHandler.java | H |
+| 1.1.2 |  |  | 아이디 비밀번호가 일치하지 않을 경우, 사용자에게 "아이디와 비밀번호가 올바르지 않습니다'라는 메시지를 표시한다. | email<br>password |  | email="user@example.com", password="" |  | MemberService.java, MyUserDetailsService.java | H |
+| 1.1.3 |  |  | 로그인 버튼을 클릭하면 입력된 아이디와 비밀번호를 기반으로 사용자 인증을 수행한다. | email<br>password | email="user@example.com", password="correctpass123" | email="", password="", |  | MemberController.java, MemberService.java, MyUserDetailsService.java | H |
+| 1.1.4 |  |  | 로그인 성공 시, 사용자를 메인 페이지 또는 지정된 페이지로 리디렉션 한다. | email<br>password | email="user@example.com", password="correctpass123" | email="", password="", |  | MemberService.java, MemberController.java | H |
+| 1.1.5 |  |  | 로그인 처리 시간은 2초 이내여야 한다. | email<br>password | email="user@example.com", password="correctpass123" | (네트워크 지연, DB 지연으로 2초 초과) |  | MemberService.java, MyUserDetailsService.java, MemberRepository | M |
+| 2 | 회원가입 |  |  |  |  |  |  | _ |  |
+| 2.1 |  | 회원가입에 필요한 필수 정보를 입력한다. |  |  |  |  |  | _ |  |
+| 2.1.1 |  |  | 아이디는 고유한 아이디를 생성해야 하며, 중복 될 수 없다. 중복시 다른 아이디를 입력 받도록 한다. | username | username="user123", | username="" |  | RegisterDto.java, MemberService.java, MemberExceptionHandler.java | H |
+| 2.1.2 |  |  | 비밀번호는 별도의 중복 검증 없이 입력받는다. | password | password="Pass123!", password="Test@456", password="MyPass#789" | password="" |  | RegisterDto.java, GlobalExceptionHandler.java | H |
+| 2.1.3 |  |  | 이메일은 유효한 이메일 주소를 입력해야 한다. 이메일 주소 형식이 올바르지 않을 경우 다른 이메일 주소를 받도록 한다. | email | email="user@example.com", | email="" |  | RegisterDto.java, GlobalExceptionHandler.java | H |
+| 2.1.4 |  |  | 중복된 이메일을 입력했을 경우, 다른 이메일 주소를 받도록 한다. | email | email="newuser@example.com" | email="existing@examp |  | MemberService.java, MemberExceptionHandler.java | H |
+| 2.1.6 |  |  | 프로필 사진을 업로드 할 수 있어야한다. |  | image=null | image=잘못된 파일 형식 |  | MemberService.java, S3Service.java | H |
+| 2.2 |  | 회원가입을 할때 선택적으로 정보를 입력한다. |  |  |  |  |  | _ |  |
+| 2.2.1 |  |  | 사용자는 이미지 파일을 선택하여 프로필 사진을 업로드 할 수 있어야한다. | image | image (확장자: .jpg) |  |  | MemberController.java<br>MemberUpdateService.java<br>S3Service.java<br>Member.java | M |
+| 2.2.2 |  |  | 사용자가 프로필 사진을 업로드 하지 않으면 기본이미지로 설정되어 있어야한다. | image | image=null |  |  | MemberService.java<br>MemberUpdateService.java<br>Member.java | M |
+| 2.2.4 |  |  | 사용자는 관심 있는 공부 분야를 선택할 수 있어야한다. | studyField | studyField="프로그래밍" |  |  | RegisterDto.java, MemberService.java, Member.java | M |
+| 2.2.5 |  |  | 사용자는 최대 200자 이내로 자신을 소개하는 글을 작성할 수 있어야한다. | bio | bio="안녕하세요" | bio = "201자 이상의 매우 긴 자기소개 텍스트" |  | RegisterDto.java, MemberService.java, Member.java | M |
+| 3 | 프로필 사진 업로드 |  |  |  |  |  |  | _ |  |
+| 3.1 |  | 사용자가 프로필 사진을 등록/변경할 수 있음 |  |  |  |  |  | _ |  |
+| 3.1.1 |  |  | 사용자는 이미지 파일을 선택하여 프로필 사진을 등록하거나 변경한다. | image | image=유효한 이미지 파일 (jpg, png, gif) | image=잘못된 파일 형식 (txt, pdf 등), image=손상된 파일, image=용량 초과 파일 |  | MemberController.java, MemberUpdateService.java, S3Service.java | H |
+| 3.1.2 |  |  | 사용자가 프로필 사진을 등록하지 않았거나, 사진을 삭제했을 경우 프로필은 기본이미지로 표시된다. | image | image=null |  |  | MemberService.java, MemberUpdateService.java, application.properties | H |
+| 3.1.3 |  |  | 업로드 시 미리보기 기능을 제공한다. | image | image=유효한 이미지 파일 (jpg, png, gif) |  |  | Profile.tsx, Register.tsx) | H |
+| 3.1.4 |  |  | 지원하는 파일 형식은 jpg, png, gjf이다. | image | image=파일명.jpg | image (확장자: .pdf)<br>image (확장자: .doc)<br>image (확장자: .exe) |  | S3Service.java<br>MemberController.java) | H |
+| 3.1.5 |  |  | 잘못된 확장자 파일은 업로드 불가 안내 메시지를 출력한다. | image |  | image (확장자: .pdf)<br>image (확장자: .doc)<br>image (확장자: .exe) |  | S3Service.java<br>GlobalExceptionHandler.java | M |
+| 4 | 아이디/나이/이메일 표시 |  |  |  |  |  |  | _ |  |
+| 4.1 |  | 기본 회원 정보를 표시함. |  |  |  |  |  | _ |  |
+| 4.1.1 |  |  | 사용자의 기본 정보(아이디,이메일)를 화면에 표시한다. |  |  |  |  | MemberController.java<br>MemberService.java<br>ProfileDto.java | H |
+| 4.1.2 |  |  | 수정은 불가하고, 확인만 가능하다. (필요 시 "계정 설정"에서 변경) |  |  |  |  | MemberController.java (GET /profile) | H |
+| 5 | 공부 분야 선택 |  |  |  |  |  |  | _ |  |
+| 5.1 |  | 사용자가 자신의 관심있는 분야를 선택 |  |  |  |  |  | _ |  |
+| 5.1.1 |  |  | 사용자가 관심있는 분야를 선택할 수 있다. <br>선택 UI는 드롭다운 또는 체크박스 형태로 제공된다. | studyField | studyField="프로그래밍" | studyField="" |  | RegisterDto.java, MemberService.java, Member.java | H |
+| 5.1.2 |  |  | 공부분야는 1개 선택가능하다. | studyField | studyField="프로그래밍" | studyField=null |  | RegisterDto.java, MemberService.java, Member.java | M |
+| 6 | 자기소개 작성 |  |  |  |  |  |  | _ |  |
+| 6.1 |  | 사용자가 자기소개를 작성/수정 가능 |  |  |  |  |  | _ |  |
+| 6.1.1 |  |  | 사용자가 자기소개를 입력/수정할 수 있다. | bio | bio="안녕하세요" | bio="null" |  | RegisterDto.java, ProfileUpdateDto.java, MemberUpdateService.java, Member.java | H |
+| 6.1.2 |  |  | 입력 제한은 최대 200자 까지 이다. | bio | bio="안녕하세요" | bio="201자 이상의 매우 긴 자기소개 텍스트..." |  | ProfileUpdateDto.java, GlobalExceptionHandler.java | M |
+| 6.1.3 |  |  | 저장시 특수문자 필터링을 적용한다. | bio | bio="안녕하세요!@#$%^&*()" | bio="안녕하세요" |  | ProfileUpdateDto.java<br>MemberUpdateService.java | M |
+| 6.1.4 |  |  | 빈 값 입력 시 "자기소개를 입력하세요" 안내 메시지를 출력한다. | bio | bio="" |  |  | ProfileUpdateDto.java<br>GlobalExceptionHandler.java | M |
+| 7 | 비밀번호 변경 |  |  |  |  |  |  | _ |  |
+| 7.1 |  | 비밀번호를 변경할 수 있다. |  |  |  |  |  | _ |  |
+| 7.1.1 |  |  | 사용자는 현재 비밀번호를 입력하고 새 비밀번호로 변경할 수 있다. | newPassword<br>newPasswordCheck | currentPassword="currentpass123", newPassword="newpass123", newPasswordCheck="newpass123" | currentPassword="", newPassword="newpass123", newPasswordCheck="newpass123"<br>currentPassword=null, newPassword="newpass123", newPasswordCheck="newpass123"<br>currentPassword="wrongpass", newPassword="newpass123", newPasswordCheck="newpass123" |  | PasswordChangeDto.java,<br>MemberUpdateService.java<br>MemberController.java | H |
+| 7.1.2 |  |  | 새 비밀번호는 최소 8자 이상, 영문+숫자 조합 필수. | newPassword<br>newPasswordCheck | newPassword="newpass123", newPasswordCheck="newpass123" | newPassword="short", newPasswordCheck="short"<br>newPassword="onlyletters", newPasswordCheck="onlyletters"<br>newPassword="12345678", newPasswordCheck="12345678" |  | PasswordChangeDto.java,<br>GlobalExceptionHandler.java | H |
+| 7.1.3 |  |  | 비밀번호 확인 입력란을 두어 두 입력이 일치해야 변경 완료된다. | currentPassword<br>newPassword<br>newPasswordCheck | newPassword="newpass123", newPasswordCheck="newpass123" | newPassword="newpass123", newPasswordCheck="differentpass" |  | PasswordChangeDto.java, <br>MemberUpdateService.jav,a<br>MemberExceptionHandler.java | H |
+| 7.1.4 |  |  | 잘못된 입력 시 “비밀번호 형식 오류” 또는 “비밀번호 불일치” 메시지를 출력해야 한다 | currentPassword<br>newPassword<br>newPasswordCheck |  | newPassword="short", newPasswordCheck="short"<br>currentPassword="wrongpass", newPassword="newpass123", newPasswordCheck="newpass123"<br>newPassword="newpass123", newPasswordCheck="differentpass" |  | GlobalExceptionHandler.java<br>MemberExceptionHandler.java<br>PasswordChangeDto.java<br>MemberUpdateService.java | M |
+| 8 | 이메일 변경 |  |  |  |  |  |  | _ |  |
+| 8.1 |  | 이메일 주소를 변경할 수 있다. |  |  |  |  |  | _ |  |
+| 8.1.1 |  |  | 사용자는 이메일 주소를 변경할 수 있다. | email | email="user@example.com" | email=""<br>email=null<br>email="invalidemail"<br>email="user@"<br>email="@example.com" |  | RegisterDto.java<br>GlobalExceptionHandler.java | H |
+| 8.1.2 |  |  | 이메일 입력은 aaa@bbb.com 형식 검증을 거친다. | email | email="user@example.com"<br>email="test@domain.com" | email="invalidemail"<br>email="user@"<br>email="@example.com"<br>email="user@example"<br>email="user.example.com" |  | RegisterDto.java<br>GlobalExceptionHandler.java | H |
+| 9 | 아이디 변경 |  |  |  |  | email="invalidemail" |  | _ |  |
+| 9.1 |  | 아이디를 변경할 수 있다. |  |  |  | email="user@" |  | _ |  |
+| 9.1.1 |  |  | 아이디는 최소 2자, 최대 12자 이내에 변경할 수 있다. | username | username="ab"<br>username="validusername"<br>username="testuser123" | username="a"<br>username="toolongusername123" |  | RegisterDto.java<br>GlobalExceptionHandler.java | H |
+| 9.1.2 |  |  | 특수문자(@, #, %)등)는 허용하지 않는다. | username | username="validuser"<br>username="testuser123" | username="user@name"<br>username="user#name"<br>username="user%name" |  | RegisterDto.java<br>GlobalExceptionHandler.java | H |
+| 9.1.3 |  |  | 중복 아이디 입력 시 "이미 사용 중인 아이디" 메시지를 출력한다. | username |  | username="existinguser" |  | MemberRepository.java<br>MemberService.java<br>DuplicateUsernameException.java<br>MemberExceptionHandler.java | H |
+| 10 | 계정 탈퇴 |  |  |  |  |  |  | _ |  |
+| 10.1 |  | 계정을 탈퇴할 수 있다. |  |  |  |  |  | _ |  |
+| 10.1.1 |  |  | 사용자는 "계정 탈퇴" 버튼을 통해 계정을 삭제할 수 있다. | password | password="currentpass123" | password=""<br>password=null<br>password="wrongpass" |  | AccountDeleteDto.java<br>MemberController.java<br>MemberUpdateService.java | H |
+| 10.1.2 |  |  | 탈퇴 시 반드시 비밀번호 확인 절차가 있어야 한다. | password | password="currentpass123" | password=""<br>password=null<br>password="wrongpass" |  | AccountDeleteDto.java<br>MemberUpdateService.java<br>PasswordMismatchException.java<br>MemberExceptionHandler.java | H |
+| 10.1.3 |  |  | 탈퇴 완료 시 계정 정보 및 데이터는 DB에서 삭제되며, 복구가 불가능하다는 안내 메시지를 제공한다. | password | password="currentpass123" |  |  | MemberUpdateService.java<br>Member.java | H |
+| 10.1.4 |  |  | 탈퇴 직후 로그인 화면으로 리다이렉트된다. | password | password="currentpass123" |  |  | MemberController.java | M |
+| 12 | 오픈 스터디 방 만들기 |  |  |  |  |  |  | _ |  |
+| 12.1 |  | 사용자가 설정한 조건에 따라 새로운 오픈 스터디 방을 생성한다. |  |  |  |  |  | _ |  |
+| 12.1.1 |  |  | 사용자는 '방 만들기' 버튼을 통해 오픈 스터디 방 생성 페이지로 진입한다. | 방만들기 버튼 |  |  |  | (프론트엔드: 페이지 라우팅) | H |
+| 12.1.2 |  |  | 사용자는 해당 방에 입장할 수 있는 인원 수를 2~10명 내외로 설정해야 한다. | maxParticipants | maxParticipants=2 | maxParticipants=1 |  | OpenStudyRoomCreateDto.java<br>GlobalExceptionHandler.java | H |
+| 12.1.3 |  |  | 사용자는 해당 방 참여자들의 공부 분야를 선택해야 한다. | studyField | studyField="프로그래밍" | studyField=null |  | OpenStudyRoomCreateDto.java<br>OpenStudyRoomService.java<br>GlobalExceptionHandler.java | H |
+| 12.1.4 |  |  | 사용자는 해당 방의 제목을 1자~30자 내외로 입력해야 한다. | title | title="스터디 방 제목입니다" | title=null |  | OpenStudyRoomCreateDto.java<br>GlobalExceptionHandler.java | H |
+| 12.1.5 |  |  | 사용자는 해당 방에 대한 설명을 입력할 수 있다. | description | description="방 설명입니다" | description="null" |  | OpenStudyRoomCreateDto.java<br>GlobalExceptionHandler.java | M |
+| 12.1.6 |  |  | 사용자가 필수 항목(인원, 공부 분야, 방제목)을 전부 설정하지 않으면 생성 버튼이 활성화 되지 않는다. | maxParticipants<br>studyField<br>title |  | maxParticipants="", studyField="", title="" |  | OpenStudyRoomCreateDto.java<br>GlobalExceptionHandler.java | H |
+| 12.1.7 |  |  | 사용자가 생성 버튼을 클릭 시 방 목록에 즉시 표시된다. |  |  |  |  | OpenStudyRoomController.java<br>OpenStudyRoomService.java<br>OpenStudyRoomRepository.java | M |
+| 13 | 오픈 스터디 방 목록 |  |  |  |  |  |  | _ |  |
+| 13.1 |  | 현재 생성된 모든 오픈 스터디 방의 목록을 표시한다. |  |  |  |  |  | _ |  |
+| 13.1.1 |  |  | 각 방의 정보들(방 제목, 현재인원/최대인원, 공부 분야)과 방 참여 버튼을 카드 형식으로 표시한다. | 오픈스터디 페이지 |  |  |  | OpenStudyRoomController.java<br>OpenStudyRoomService.java<br>OpenStudyRoomRepository.java | H |
+| 13.1.2 |  |  | 실시간으로 목록을 업데이트 한다. |  |  |  |  | OpenStudyRoomListDto.java<br>OpenStudyRoomController.java | H |
+| 14 | 오픈 스터디 방 참여 |  |  |  |  |  |  | _ |  |
+| 14.1 |  | 오픈 스터디 방에 참여한다. |  |  |  |  |  | _ |  |
+| 14.1.1 |  |  | 오픈 스터디 방 목록에서 방 참여 버튼을 클릭하여 해당 방으로 이동한다. | roomId | roomId=1 | roomId=999 (존재하지 않는 방) |  | OpenStudyRoomController.java | H |
+| 14.1.2 |  |  | 방 생성자가 설정한 최대 인원에 도달 시 해당 방의 참여버튼은 비활성화된다. | roomId<br>currentParticipants<br>maxParticipants |  | roomId=1, currentParticipants=10, maxParticipants=10 |  | OpenStudyRoom.java<br>OpenStudyRoomListDto.java | H/M |
+| 14.1.3 |  |  | 방 입장 시, 해당 방의 현재 인원 수는 자동으로 증가한다. | roomId<br>currentParticipants | roomId=1 |  |  | OpenStudyRoomService.java<br>OpenStudyRoom.java<br>RoomParticipantRepository.java | H/M |
+| 14.1.4 |  |  | 다른 사용자와 동시 접속 중 다른 사용자의 선입장으로 해당 방의 정원이 꽉 찼을 경우, 에러 메세지를 출력한다. | roomId |  | roomId=1 (동시 접속으로 인해 정원 초과된 경우) |  | OpenStudyRoomService.java<br>RoomFullException.java<br>OpenStudyRoomExceptionHandler.java | H/M |
+| 14.1.5 |  |  | 이미 다른 스터디룸에 참여 중일 경우, 에러 메세지를 출력한다. | roomId |  | roomId=1 (이미 다른 방에 참여 중인 사용자가 참여 시도) |  | OpenStudyRoomService.java<br>AlreadyInRoomException.java<br>OpenStudyRoomExceptionHandler.java | H/M |
+| 14.1.6 |  |  | 이미 삭제된 방에 입장할 경우, 에러 메세지 출력 및 목록을 새로고침한다. | roomId |  | roomId=1 (삭제된 방) |  | OpenStudyRoomService.java<br>RoomNotFoundException.java<br>OpenStudyRoomExceptionHandler.java<br>) | H |
+| 15 | 오픈 스터디 방 삭제 |  |  |  |  |  |  | _ |  |
+| 15.1 |  | 참여자가 없는 방을 자동으로 삭제한다. |  |  |  |  |  | _ |  |
+| 15.1.1 |  |  | 사용자가 방을 생성하고 5분동안 다른 참여자가 없을 시, 방 생성자에게 '5분동안 다른 참여자가 없어 방이 삭제됩니다.' 안내 메시지를 출력하고, 자동으로 방 삭제 및 방 목록에서 즉시 삭제된다. | roomId<br>creatorId<br>participantCount<br>creationTime |  |  |  | OpenStudyRoomService.java<br>OpenStudyRoomRepository.java<br>RoomCleanupScheduler.java | H |
+| 15.1.2 |  |  | 방 참여자가 1명이 됐을 경우(생성자 외 다른 사용자), 해당 참여자에게 '방 참여자가 2명 미만이 되어 5분 후 방을 삭제합니다.' 안내 메시지를 출력하고, 자동으로 방 삭제 및 방 목록에서 즉시 삭제된다. | roomId<br>participantCount |  |  |  | OpenStudyRoomService.java<br>OpenStudyRoom.java<br>RoomCleanupScheduler.java | H |
+| 15.1.3 |  |  | 방 참여자가 모두 나간 방(빈 방)은 5분 후 자동으로 삭제되며,  방 목록에서 즉시 삭제된다. | roomId<br>participantCount |  |  |  | OpenStudyRoomService.java<br>OpenStudyRoom.java<br>RoomCleanupScheduler.java | H |
+| 15.1.4 |  |  | 5분 타이머가 진행 중 다른 사용자가 참여를 시도할 시, 해당 사용자에게 '곧 삭제될 방입니다. 다른 방을 이용해 주세요.' 안내 메시지를 출력한다. | roomId |  | roomId=1 (삭제 예정 상태의 방) |  | OpenStudyRoomService.java<br>RoomDeletingException.java<br>OpenStudyRoomExceptionHandler.java | H |
+| 16 | 공통 에러 처리 |  |  |  |  |  |  | _ |  |
+| 16.1 |  | 모든 기능에서 공통적으로 발생하는 에러를 처리한다. |  |  |  |  |  | _ |  |
+| 16.1.1 |  |  | 네트워크 오류, 서버 오류, 타임아웃, 권한 오류 발생 시 에러 메세지를 출력한다. |  |  |  |  | GlobalExceptionHandler.java | H |
+| 17 | 그룹 스터디 방 생성 및 종료 |  |  |  |  |  |  | _ |  |
+| 17.1 |  | 사용자가 직접 그룹 스터디 방을 생성하고 스터디 방의 종료 기능이다. |  |  |  |  |  | _ |  |
+| 17.1.1 |  |  | 사용자는 '스터디방 만들기' 버튼을 통해 스터디룸 생성 페이지로 진입할 수 있다. | roomName(방 이름), studyField(공부 분야), studyHours(목표 시간), maxMembers(최대 인원) | roomName="알고리즘 스터디", studyField="컴퓨터과학", studyHours=2, maxMembers=6 | roomName="", studyHours=0, maxMembers=1 |  | GroupStudyRoom.tsx (생성 폼), studyRoomAPI.createRoom, POST /api/study-rooms | H |
+| 17.1.2 |  |  | 사용자는 스터디 룸의 인원 수를 2명에서 10명 사이로 설정할 수 있다. | maxMembers(최대 인원) | maxMembers=5 | maxMembers=1, maxMembers=11 |  | GroupStudyRoom.tsx (입력 검증), toast 알림 | H |
+| 17.1.3 |  |  | 사용자는 공부 분야(예: 프로그래밍, 영어, 자격증 등)를 선택해야 한다. | studyField(공부 분야) | studyField="프로그래밍" | studyField="" |  | GroupStudyRoom.tsx (분야 선택), Select 컴포넌트 | H |
+| 17.1.4 |  |  | 사용자는 공부 시간을 최소 1시간부터 최대 5시간까지 1시간 단위로 설정할 수 있다. | studyHours(목표 시간) | studyHours=3 | studyHours=0, studyHours=6 |  | GroupStudyRoom.tsx (시간 설정), Input 컴포넌트 | H |
+| 17.1.5 |  |  | 방 생성자는 방의 이름을 설정할 수 있으며, 입력하지 않을 경우 알림 메세지를 출력한다. | roomName(방 이름) | roomName="토익 스터디" | roomName="" |  | GroupStudyRoom.tsx (입력 검증), toast 알림 | M |
+| 17.1.6 |  |  | 방 생성자는 자신이 속한 그룹 목록 중에서 스터디를 진행할 그룹을 선택하지 않을 시, 에러 메세지를 출력한다. | groupId(그룹 선택) | groupId=123 | groupId=null |  | GroupStudyRoom.tsx (그룹 선택), Select 컴포넌트 | M |
+| 17.1.7 |  |  | 필수 정보(그룹 선택, 공부 시간 등)를 모두 입력하지 않으면 에러 메세지를 출력한다. | 필수 정보 | 모든 필수 정보 입력 완료 | 일부 필수 정보 누락 |  | GroupStudyRoom.tsx (검증 로직), toast 알림 | M |
+| 17.1.8 |  |  | 방 만들기에 성공하면, 생성자는 자동으로 해당 룸에 입장한다. | "방 생성" 버튼 | 모든 필수 정보 입력 완료 |  |  | GroupStudyRoom.tsx (navigate 함수), React Router | M |
+| 17.1.9 |  |  | 방 생성자가 설정한 공부 시간이 종료되면, 해당 스터디는 종료되어 모든 사용자는 자동으로 퇴장된다. |  | studyHours 경과 후 |  |  | 백엔드 타이머 로직, 자동 퇴장 처리 | M |
+| 18 | 그룹 생성 및 삭제 |  |  |  |  |  |  | _ |  |
+| 18.1 |  | 사용자가 그룹을 생성하고, 더 이상 활동하지 않는 그룹을 삭제할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 18.1.1 |  |  | 사용자는 '그룹 만들기’ 버튼을 통해 새로운 그룹을 생성할 수 있다. | groupName(그룹 이름), description(그룹 설명) | groupName="SW공학팀", description="소프트웨어공학 프로젝트" | groupName="" |  | GroupManagement.tsx (생성 폼), groupAPI.createGroup | H |
+| 18.1.2 |  |  | 그룹 생성 시, 사용자는 그룹 이름을 필수로 입력해야 하며, 그룹 이름을 입력하지 않을 시, 에러 메세지를 출력한다. | groupName | groupName="알고리즘 스터디" | groupName="" |  | GroupManagement.tsx (입력 검증), toast 알림 | H |
+| 18.1.3 |  |  | 그룹을 생성한 사용자는 자동을 해당 그룹의 ‘방장’의 권한을 가진다. |  |  |  |  | 백엔드 권한 설정, Group.creatorId = userId | H |
+| 18.1.4 |  |  | 방장은  ‘그룹 삭제’ 버튼을 클릭하여 그룹을 영구적으로 삭제할 수 있다. | "그룹 삭제" 버튼 | 그룹장 권한 확인 |  |  | GroupManagement.tsx (handleDeleteGroup), groupAPI.deleteGroup | H |
+| 18.1.5 |  |  | 그룹을 삭제하기 전에 ‘그룹을 삭제하면 모든 활동 내역이 사라집니다. 정말 삭제하시겠습니까?’와 같은 확인 절차를 거친다. | "그룹 삭제" 확인 대화상자 | "확인" 버튼 클릭 | "취소" 버튼 클릭 |  | Dialog 컴포넌트, window.confirm | M |
+| 18.1.6 |  |  | 그룹 삭제는 그룹 내 방장 외에 다른 멤버가 없는 경우만 가능하다. |  | 멤버 수 = 1 | 멤버 수 > 1 |  | 백엔드 검증 로직, 멤버 수 확인 | M |
+| 19 | 그룹 멤버 확인 |  |  |  |  |  |  | _ |  |
+| 19.1 |  | 그룹 멤버를 확인할 수 있고 방장이 외부 사용자를 URL 링크를 통해 초대할 수 있으며 그룹 내 사용자를 추방할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 19.1.1 |  |  | 그룹 멤버 페이지에서 방장은 ‘초대 링크 복사’ 버튼을 누르면 해당 그룹의 고유한 초대 URL이 클립보드에 복사된다. | "초대 링크 복사" 버튼 |  |  |  | GroupManagement.tsx (handleCopyLink), navigator.clipboard.writeText | M |
+| 19.1.2 |  |  | 초대 링크를 통해 접속했으나 로그인 상태가 아닌 경우, 로그인 페이지로 이동시킨다. | inviteLink(초대 링크) | 미로그인 상태로 링크 접속 |  |  | React Router, AuthContext, navigate("/login") | H |
+| 19.1.3 |  |  | 로그인을 완료하면, 시스템은 사용자를 초대된 그룹에 자동으로 멤버로 추가시 처리한다. |  |  |  |  | groupAPI.joinByInvite, POST /api/groups/{groupId}/join | H |
+| 19.1.4 |  |  | 초대 링크를 통해 접속했으며 이미 로그인 상태인 경우, 별도 절차 없이 해당 그룹에 바로 추가한다. | inviteLink | 로그인 상태로 링크 접속 |  |  | groupAPI.joinByInvite (자동 처리) | M |
+| 19.1.5 |  |  | 이미 해당 그룹의 멤버인 사용자가 초대 링크를 통해 접속할 경우, 별도 절차 없이 그룹 멤버 페이지로 바로 이동시킨다. |  | 이미 그룹 멤버 |  |  | 백엔드 멤버십 확인, navigate to group page | M |
+| 19.1.6 |  |  | 그룹 멤버 리스트에서 현재 소속된 그룹 멤버들의 목록이 표시된다. |  |  |  |  | GroupManagement.tsx (members state), groupAPI.getMembers | H |
+| 19.1.7 |  |  | 방장은 각 멤버 목록 옆에 있는 ‘추방’ 버튼을 클릭하여 해당 멤버를 그룹에서 제외시킬 수 있다. | memberId(멤버 선택), "추방" 버튼 | 그룹장 권한으로 멤버 선택 | 권한 없음 |  | groupAPI.kickMember, DELETE /api/groups/{groupId}/members/{memberId} | H |
+| 19.1.8 |  |  | 멤버를 추방하기 전에 ‘정말로 추방하시겠습니까?’와 같은 확인 절차를 거친다. | "추방" 확인 대화상자 | "확인" 클릭 | "취소" 클릭 |  | Dialog 컴포넌트, window.confirm | M |
+| 19.1.9 |  |  | 추방된 사용자는 더 이상 해당 그룹의 스터디에 참여하거나 그룹 스터디 페이지에 접근 할 수 없다. |  |  |  |  | 백엔드 권한 검증, 그룹 멤버십 확인 | M |
+| 20 | 그룹 스터디 목록 |  |  |  |  |  |  | _ |  |
+| 20.1 |  | 자신이 소속된 그룹의  스터디 방 목록을 확인하는 기능이다. |  |  |  |  |  | _ |  |
+| 20.1.1 |  |  | 사용자는 자신이 소속된 그룹의 스터디 목록만을 볼 수 있다. | "그룹 스터디" 메뉴 |  |  |  | GroupStudy.tsx, studyRoomAPI.getGroupRooms, GET /api/study-rooms/group/{groupId} | H |
+| 20.1.2 |  |  | 각 스터디 카드에는 스터디를 개설한 그룹명, 방 이름, 현재 참여 인원/최대 인원, 남은 시간이 표시된다. |  |  |  |  | GroupStudy.tsx (RoomCard 컴포넌트), GroupStudyRoom 인터페이스 | H |
+| 20.1.3 |  |  | 사용자가 여러 그룹에 속해 있을 경우, 그룹별로 스터디 목록을 구분하여 볼 수 있는 필터 기능을 제공한다. | groupId(그룹 필터) | 특정 그룹 선택 |  |  | GroupStudy.tsx (필터링 로직), Select 컴포넌트 | M |
+| 20.1.4 |  |  | 참여 인원이 최대 인원에 도달한 경우 '입장 불가'라는 메세지를 출력한다. |  | currentMembers >= maxMembers |  |  | 조건부 렌더링, 버튼 비활성화, toast 알림 | M |
+| 21 | 그룸 스터디 참여 및 종료 |  |  |  |  |  |  | _ |  |
+| 21.1 |  | 자신이 속한 그룹 스터디에 입장 및 퇴장하는 기능이다. |  |  |  |  |  | _ |  |
+| 21.1.1 |  |  | 사용자는 '그룹 스터디 목록' 에서 '입장' 버튼을 클릭하여 스터디룸에 참여할 수 있다. | "입장" 버튼 |  |  |  | GroupStudy.tsx (handleJoinRoom), studyRoomAPI.joinRoom, POST /api/study-rooms/{roomId}/join | H |
+| 21.1.2 |  |  | 해당 그룹의 멤버가 아닌 외부 사용자가 부적절한 방법으로 스터디 방을 접근 시, 해당 접근을 막고 에러 메세지를 출력한다. |  | 비멤버 접근 시도 |  |  | 백엔드 권한 검증, 403 Forbidden, toast 에러 알림 | H |
+| 21.1.3 |  |  | 방 생성자가 설정한 공부 시간이 종료되면, 해당 스터디는 종료되어 모든 사용자는 자동으로 퇴장된다. |  | studyHours 경과 후 |  |  | 백엔드 타이머 로직, WebSocket SYSTEM 메시지 | M |
+| 21.1.4 |  |  | 방 참여 시, 네트워크 연결이 불안정할 경우 "연결에 실패했습니다."라는 에러 메세지를 출력한다. |  | 네트워크 오류 발생 |  |  | axios interceptor, catch 블록, toast 에러 알림 | L |
+| 21.1.5 |  |  | 방 생성자가 설정한 최대 인원 도달 시 해당 방의 참여 버튼을 비활성화 한다. |  | currentMembers >= maxMembers |  |  | 조건부 렌더링, disabled={isFull}, Button 컴포넌트 | L |
+| 22 | 사용자 레벨 |  |  |  |  |  |  | _ |  |
+| 22.1 |  | 사용자마다 레벨과 경험치를 가지고 있는 기능이다. |  |  |  |  |  |  |  |
+| 22.1.1 |  |  | 1분마다의 경험치를 설정해놓고 사용자의 레벨이 올라갈 수 있도록 한다. | studySeconds(학습 시간) | studySeconds=3600 (1시간) |  |  | sessionAPI.endSession, POST /api/study-sessions/{sessionId}/end, SessionEndResultDto | L |
+| 22.1.2 |  |  | 스터디룸 오른쪽 상단에 레벨과 경험치를 표시한다. |  |  |  |  | GroupStudyRoom.tsx (levelInfo state), sessionAPI.getLevelInfo, LevelInfoDto | L |
+| 23 | 참여자 목록 확인 |  |  |  |  |  |  | _ |  |
+| 23.1 |  | 현재 스터디룸에 접속해 있는 사용자들의 정보를 확인하는 기능이다. |  |  |  |  |  | _ |  |
+| 23.1.1 |  |  | 시스템은 현재 스터디룸에 접속한 모든 사용자를 표시 한다. | "참여자" 버튼 |  |  |  | GroupStudyRoom.tsx (Popover), participants state, studyRoomAPI.getParticipants | H |
+| 23.1.2 |  |  | 해당 스터디룸 내 다른 사용자가 입장하거나 퇴장할 경우, 시스템은 목록을 자동으로 갱신해야 한다. |  |  |  |  | WebSocket SYSTEM 메시지 (ENTER/LEAVE), 실시간 갱신 | H |
+| 23.1.3 |  |  | 참여자 목록을 5초마다 자동으로 갱신한다. |  |  |  |  | useEffect polling, setInterval(5000) | M |
+| 23.1.4 |  |  | 참여자 목록이 갱신이 안 될 경우 새로고침 버튼을 넣어서 참여자 목록을 수동으로 갱신 할 수 있도록 한다. | "새로고침" 버튼 |  |  |  | RefreshCw 아이콘, handleRefreshParticipants 함수 | M |
+| 24 | 참여 시간 확인 |  |  |  |  |  |  | _ |  |
+| 24.1 |  | 스터디룸 내 사용자가 머문 시간을 조회할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 24.1.1 |  |  | 시스템은 사용자가 스터디룸에 머문 시간을  표시해야 한다. |  |  |  |  | GroupStudyRoom.tsx (formatTime), currentSeconds state, useEffect interval | H |
+| 25 | 공부/휴식 모드 설정 |  |  |  |  |  |  | _ |  |
+| 25.1 |  | 사용자가 자신의 상태를 공부 또는 휴식으로 전환하여 스터디룸 내 다른 사용자들에게 표시하는 기능이다. |  |  |  |  |  | _ |  |
+| 25.1.1 |  |  | 사용자는 버튼을 눌러 자신의 상태를 공부 모드 또는 휴식 모드로 전환할 수 있다. | "공부중"/"휴식중" 버튼 |  |  |  | GroupStudyRoom.tsx (handleStatusToggle), setMyStatus("studying"/"resting") | H |
+| 25.1.2 |  |  | 휴식 모드일 경우 타이머가 정지되고 공부 모드일 경우 타이머가 재개된다. |  |  |  |  | useEffect interval, clearInterval when resting, 타이머 재개 when studying | H |
+| 25.1.3 |  |  | 학습주기 반복 타이머 기능을 사용할 경우, 시스템은 사용자가 설정한 학습 주기에 따라공부/휴식 모드를 전환해야 한다. |  |  |  |  | 뽀모도로 타이머 완료 시 자동 모드 전환, handlePomodoroComplete | H |
+| 26 | 학습주기 반복 타이머 설정(뽀모도로) |  |  |  |  |  |  | _ |  |
+| 26.1 |  | 공부 시간과 휴식 시간을 주기로 설정하고 반복 실행하여 학습 리듬을 유지할 수 있도록 돕는 기능이다. |  |  |  |  |  | _ |  |
+| 26.1.1 |  |  | 공부 시간과 휴식 시간을 주기로 설정할 수 있다. | pomodoroMode(모드) | pomodoroMode="work", "shortBreak", "longBreak" |  |  | GroupStudyRoom.tsx (handlePomodoroModeChange), pomodoroMode state | H |
+| 26.1.2 |  |  | 사용자는 버튼을 통해 타이머를 켜거나 끌 수 있다. | "시작"/"일시정지" 버튼 |  |  |  | GroupStudyRoom.tsx (handlePomodoroStart/Pause), setPomodoroIsRunning | H |
+| 26.1.3 |  |  | 사용자가 타이머 작동 버튼을 눌렀을 경우, 시스템은 공부 시간을 카운트다운 한다. |  |  |  |  | useEffect pomodoro interval, pomodoroTime 감소 | H |
+| 26.1.4 |  |  | 휴식 시간은 짧은 휴식 시간(5분), 긴 휴식 시간(15분) 으로 나뉘어져 있다. 짧은 휴식 시간, 긴 휴식 시간을 반복적으로 번갈아 가며 실행되어진다. |  | shortBreak 5분, longBreak 15분 |  |  | pomodoroMode state, 모드별 시간 설정 (25분/5분/15분) | M |
+| 26.1.5 |  |  | 타이머 작동 중 공부 시간(25분)이 끝나는 경우, 시스템은 타이머를 휴식 시간으로 자동 전환하여 카운트다운 한다. |  | pomodoroTime=0 & mode=work |  |  | useEffect pomodoro, setPomodoroMode("shortBreak"), toast 알림 | H |
+| 26.1.6 |  |  | 타이머 작동 중 휴식 시간이 끝나는 경우, 시스템은 타이머를 공부 시간으로 자동 전환하여 카운트다운한다. |  | pomodoroTime=0 & mode=break |  |  | useEffect pomodoro, setPomodoroMode("work"), pomodoroCycle++ | H |
+| 26.1.7 |  |  | 사용자가 타이머를 종료하기 전까지 자동전환을 반복한다. |  |  |  |  | pomodoroCycle 무한 반복, handlePomodoroPause로만 중지 | H |
+| 26.1.8 |  |  | 공부 시간이나 휴식시간으로 전환되는 경우, 시스템은 사용자에게 알림을 보내야 한다. |  |  |  |  | toast 알림, 🎉 이모지 메시지 | M |
+| 27 | 배경 음악 선택 |  |  |  |  |  |  | _ |  |
+| 27.1 |  | 사용자가 배경음악을 설정할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 27.1.1 |  |  | 사용자는 배경음악을 선택할 수 있다. 백색소음, 분위기 음악, 자연음악 등이 있다. | music(음악 선택) | 음악 파일 선택 |  |  | GroupStudyRoom.tsx (music state), Audio 컴포넌트, Select | L |
+| 27.1.2 |  |  | 배경음악을 원치 않으면 끌 수 있다. | "재생"/"정지" 버튼 |  |  |  | handleMusicToggle, audio.play(), audio.pause(), volume 조절 | L |
+| 28 | 스터디룸 나가기 |  |  |  |  |  |  | _ |  |
+| 28.1 |  | 사용자가 스터디룸에서 나갈 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 28.1.1 |  |  | 사용자는 스터디룸 화면에서 “나가기” 버튼을 선택한다. | "나가기" 버튼 |  |  |  | GroupStudyRoom.tsx (setExitDialogOpen), Dialog 컴포넌트 | H |
+| 28.1.2 |  |  | 시스템은 사용자에게 스터디룸을 나갈 것인지 확인 메시지를 표시한다. | "나가기" 확인 대화상자 | "확인" 버튼 클릭 | "취소" 버튼 클릭 |  | Dialog, AlertDialog 컴포넌트 | H |
+| 28.1.3 |  |  | 사용자는 확인 메시지에서 “확인” 버튼을 선택한다 | "확인" 버튼 |  |  |  | handleExitRoom 함수 실행, leaveRoom | H |
+| 28.1.4 |  |  | 시스템은 사용자를 스터디룸에서 제거하고 메인 페이지로 이동시킨다. |  |  |  |  | navigate("/group-study"), React Router | H |
+| 28.1.5 |  |  | 시스템은 다른 참여자들의 참여자 목록에서 해당 사용자를 제거한다. |  |  |  |  | WebSocket SYSTEM 메시지 (LEAVE), 실시간 참여자 목록 갱신 | H |
+| 29 | 스터디룸 삭제 |  |  |  |  |  |  | _ |  |
+| 29.1 |  | 방장 권한을 가지고 있는 사용자가 스터디룸을 삭제 할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 29.1.1 |  |  | 방장 권한을 가지고 있는 사용자는 방에 참여자가 아무도 없을 시 방을 삭제 할 수 있다. |  | isCreator=true & participants.length=1 | isCreator=false or participants>1 |  | roomInfo.creatorId === user.id, 조건부 렌더링 | H |
+| 29.1.2 |  |  | 방장은 방을 삭제 하지 않은 이상 방을 나갈 수 없다. |  |  |  |  | "방장이 나가면 권한이 이양되거나 방이 삭제됩니다" 확인 메시지 | M |
+| 29.1.3 |  |  | 방을 삭제 후에는 복구 할 수 없으며, 세션 기록이 저장된다. |  |  |  |  | studyRoomAPI.endRoom, sessionAPI.endSession, 백엔드에 기록 저장 | H |
+| 29.1.4 |  |  | 스터디 방 목록에서 삭제한 방이 뜨지 않도록 한다. |  |  |  |  | 백엔드 soft delete or hard delete, 목록 API에서 제외 | H |
+| 30 | 그룹 스터디 남은 시간 표시 |  |  |  |  |  |  | _ |  |
+| 30.1 |  | 그룹 스터디룸에서 스터디룸 생성자가 설정한 목표 공부 시간이 얼마나 남았는지를 실시간으로 확인할 수 있도록 표시하는 기능이다. |  |  |  |  |  | _ |  |
+| 30.1.1 |  |  | 시스템은 그룹 스터디룸 생성 시 설정된 목표 공부 시간을 불러온다. |  | studyHours 설정 |  |  | GroupStudyRoom 인터페이스 (studyHours), roomInfo.studyHours | H |
+| 30.1.2 |  |  | 시스템은 목표 시간에 따라 카운트다운을 시작한다. |  | remainingMinutes 감소 |  |  | 백엔드 타이머 로직, remainingMinutes 계산 | H |
+| 30.1.3 |  |  | 시스템은 남은 시간을 스터디룸 화면에 실시간으로 표시한다. |  |  |  |  | GroupStudyRoom.tsx (roomInfo.remainingMinutes), Clock 아이콘 | H |
+| 30.1.4 |  |  | 그룹스터디룸에 입장한 사용자는 그룹에 설정된 남은 목표시간을 볼 수 있다. |  |  |  |  | 헤더에 "남은 시간: X분" 표시 | H |
+| 31 | 사용자 인증 상태 |  |  |  |  |  |  | _ |  |
+| 31.1 |  | 사용자 인증 상태를 나타낸다. |  |  |  |  |  | _ |  |
+| 31.1.1 |  |  | 네비게이션 바는 어느 페이지에 있든 항상 화면 최상단에 고정되어 표시된다. |  |  |  |  | Sidebar.tsx, fixed positioning, z-index 설정 | H |
+| 31.1.2 |  |  | 사용자가 로그인하지 않았을 경우, 네비게이션 바에는 '로그인'버튼과 '회원가입' 버튼이 표시된다. |  | user=null |  |  | AuthContext (useAuth), 조건부 렌더링 | H |
+| 31.1.3 |  |  | 사용자가 로그인했을 경우, '마이페이지'와 '로그아웃' 버튼이 표시된다. |  | user={id, username, ...} |  |  | AuthContext (useAuth), 조건부 렌더링 | H |
+| 32 | 페이지 이동 |  |  |  |  |  |  | _ |  |
+| 32.1 |  | 페이지 이동이 가능하다. |  |  |  |  |  | _ |  |
+| 32.1.1 |  |  | 로그인 버튼을 클릭하면, 로그인 페이지로 이동한다. | "로그인" 버튼 |  |  |  | navigate("/login"), React Router Link | H |
+| 32.1.2 |  |  | 회원가입 버튼을 클릭하면, 회원가입 페이지로 이동한다. | "회원가입" 버튼 |  |  |  | navigate("/register"), React Router Link | H |
+| 32.1.3 |  |  | 오른쪽 상단 프로필 UI에서 로그아웃 버튼을 클릭하면,  인증이 만료된다. | "로그아웃" 버튼 |  |  |  | handleLogout, tokenManager.clearTokens(), navigate("/login") | H |
+| 32.1.4 |  |  | 좌측 상단에 로고를 클릭하면, 메인 페이지로 이동한다. | "로고" 클릭 |  |  |  | navigate("/"), React Router Link | M |
+| 32.1.5 |  |  | 내비게이션 바 상단 중간 로고(오픈 스터디)를 클릭하면, 오픈 스터디 페이지로 이동한다. | "오픈 스터디" 메뉴 |  |  |  | navigate("/open-study"), React Router Link | H |
+| 32.1.6 |  |  | 내비게이션 바 상단 중간 로고(그룹 스터디)를 클릭하면, 그룹 스터디 페이지로 이동한다. | "그룹 스터디" 메뉴 |  |  |  | navigate("/group-study"), React Router Link | H |
+| 32.1.7 |  |  | 내비게이션 바 상단 중간 로고(체크리스트)를 클릭하면, 체크리스트 페이지로 이동한다. | "체크리스트" 메뉴 |  |  |  | navigate("/checklist"), React Router Link | H |
+| 32.1.8 |  |  | 오른쪽 상단 프로필 UI에서 마이페이지를 클릭하면, 마이페이지로 이동한다. | "마이페이지" 버튼 |  |  |  | navigate("/profile"), React Router Link | H |
+| 32.1.9 |  |  | 마이페이지에서 계정 탈퇴를 진행할 시 로그인 페이지로 이동한다. | "계정 탈퇴" 버튼 |  |  |  | handleDeleteAccount, authAPI.deleteAccount, navigate("/login") | M |
+| 32.1.10 |  |  | 오픈 스터디 페이지에서 방을 만들거나 방 참여하기 버튼을 누를 시 오픈 스터디룸 페이지로 이동한다. | "입장" 버튼 |  |  |  | navigate("/open-study/room/${roomId}") | H |
+| 32.1.11 |  |  | 그룹 스터디 페이지에서 방을 만드러간 방 참여하기 버튼을 누를 시 그룹 스터디룸 페이지로 이동한다. | "입장" 버튼 |  |  |  | navigate("/group-study/room/${roomId}") | H |
+| 32.1.12 |  |  | 초대하기 링크를 통해 주소로 이동할 시 오픈 스터디, 그룹 스터디 각각에서 초대한 룸 페이지로 이동한다. | inviteLink | 초대 링크를 통한 접근 |  |  | React Router params, /invite/:groupId | H |
+| 33 | 체크리스트 생성 |  |  |  |  |  |  | _ |  |
+| 33.1 |  | 사용자가 체크리스트를 만들어 목표를 설정 할 수 있다 |  |  |  |  |  | _ |  |
+| 32.1.1 |  |  | 사용자가 체크리스트를 생성하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | "로그인" 버튼 |  |  |  | navigate("/login"), React Router Link | H |
+| 32.1.2 |  |  | 사용자가 원하는 날짜를 선택하고 생성 버튼을 누르면 체크리스트를 작성하는 창을 연다 | "회원가입" 버튼 |  |  |  | navigate("/register"), React Router Link | H |
+| 32.1.3 |  |  | 체크리스트에 한 글자 이상 적혀 있지 않거나 날짜를 선택하지 않고 완료 버튼을 누르면 내용을 입력해주세요 라는 문구를 출력한다 | "로그아웃" 버튼 |  |  |  | handleLogout, tokenManager.clearTokens(), navigate("/login") | H |
+| 32.1.4 |  |  | 체크리스트를 작성하고 완료 버튼을 누르면 체크리스트가 추가 되고 날짜를 선택하는 창으로 돌아간다 | "로고" 클릭 |  |  |  | navigate("/"), React Router Link | M |
+| 32.1.5 |  |  | 체크리스트가 한 개 이상 있는 날짜는 날짜를 빨간색 글자로 나타내 체크리스트가 있는 것을 표시해야 한다 | "오픈 스터디" 메뉴 |  |  |  | navigate("/open-study"), React Router Link | H |
+| 33 | 체크리스트 수정 |  |  |  |  |  |  | _ |  |
+| 33.1 |  | 사용자가 작성한 체크리스트를 수정할 수 있다 |  |  |  |  |  | _ |  |
+| 33.1.1 |  |  | 사용자가 체크리스트를 수정하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | "날짜 선택" 창 |  |  |  | Calendar 컴포넌트 (react-calendar or custom) | H |
+| 33.1.2 |  |  | 사용자가 원하는 날짜를 선택하고 수정 버튼을 누른다 | selectedDate(선택한 날짜), "생성" 버튼 | selectedDate="2024-12-25" |  |  | Checklist.tsx (Dialog), setChecklistDialogOpen(true) | H |
+| 33.1.3 |  |  | 사용자가 선택한 날짜에 체크리스트가 한 개 이상 존재하지 않으면 수정할 체크리스트가 없습니다 라는 문구를 출력한다 | title(제목), content(내용) | title="알고리즘 공부" | title="", content="" |  | Checklist.tsx (입력 검증), toast 알림 | H |
+| 33.1.4 |  |  | 사용자가 수정 버튼을 누르면 체크리스트를 수정하는 창을 띄운다 | "완료" 버튼 |  |  |  | handleCreateChecklist, checklistAPI.createChecklist, POST /api/checklists | H |
+| 33.1.5 |  |  | 체크리스트를 수정하고 완료 버튼을 누르면 수정된 체크리스트 내용으로 업데이트한다 |  |  |  |  | Calendar 컴포넌트 (tileClassName), 조건부 스타일링 | M |
+| 33.1.6 |  |  | 체크리스트 내용에 한 글자 이상 존재하지 않으면 내용을 입력해 주세요 라는 문구를 출력한다 |  |  |  |  | _ | M |
+| 34 | 체크리스트 조회 |  |  |  |  |  |  | _ |  |
+| 34.1 |  | 사용자가 작성한 체크리스트를 조회 할 수 있다 |  |  |  |  |  | _ |  |
+| 34.1.1 |  |  | 사용자가 체크리스트를 조회하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | "날짜 선택" 창 |  |  |  | Calendar 컴포넌트 | H |
+| 34.1.2 |  |  | 사용자가 날짜를 선택하면 오른쪽 화면에 작성된 체크리스트를 출력한다 | selectedDate, "수정" 버튼 | selectedDate="2024-12-25" |  |  | Checklist.tsx (handleEditClick) | H |
+| 34.1.3 |  |  | 사용자가 선택한 날짜에 체크리스트가 한 개 이상 존재하지 않으면 체크리스트가 없습니다 라는 문구를 출력한다 |  | checklists.length=0 for date |  |  | 조건부 렌더링, toast 알림 | M |
+| 35 | 체크리스트 삭제 |  |  |  |  |  |  | _ |  |
+| 35.1 |  | 사용자가 생성한 체크리스트를 삭제 할 수 있다 |  |  |  |  |  | _ |  |
+| 35.1.1 |  |  | 사용자가 체크리스트를 삭제하기 위해서는 날짜를 선택할 수 있는 창이 열려 있어야 한다 | "날짜 선택" 창 |  |  |  | Calendar 컴포넌트 | H |
+| 35.1.2 |  |  | 사용자가 날짜를 선택하면 오른쪽 화면에 작성된 체크리스트를 출력한다 | selectedDate | selectedDate="2024-12-25" |  |  | checklistAPI.getChecklistsByDate, GET /api/checklists?date={date} | H |
+| 35.1.3 |  |  | 사용자가 체크리스트를 삭제하기 위해서는 체크리스트가 한 개 이상 존재해야 한다 |  | checklists.length=0 |  |  | 조건부 렌더링, "체크리스트가 없습니다" 메시지 | M |
+| 35.1.4 |  |  | 사용자가 삭제 버튼을 누르면 삭제하는 체크리스트를 선택할 수 있는 창을 띄운다 |  |  |  |  | _ | H |
+| 35.1.5 |  |  | 사용자가 삭제할 체크리스트를 한 개 이상 선택하지 않으면 창에서 삭제 버튼이 활성화되지 않는다 |  |  |  |  | _ | H |
+| 35.1.6 |  |  | 사용자가 체크리스트를 선택하고 삭제 버튼을 누르면 체크리스트를 삭제한다 |  |  |  |  | _ | H |
+| 36 | 새로고침 |  |  |  |  |  |  | _ |  |
+| 36.1 |  | 새로고침 버튼을 눌러 방 목록과 그룹 등을 갱신할 수 있는 기능이다. |  |  |  |  |  | _ |  |
+| 36.1.1 |  |  | 오픈 스터디와 그룹 스터디 페이지에서 오른쪽 상단에 새로고침 버튼을 통해 새로 생긴 방과 참여자 수등을 갱신할 수 있다. | "날짜 선택" 창 |  |  |  | Calendar 컴포넌트 | H |
+| 36.1.2 |  |  | 그룹 스터디 페이지에서 오른쪽 상단에 새로고침 버튼을 통해 새로 생긴 그룹과 참여자 목록을 갱신할 수 있다. | selectedDate | selectedDate="2024-12-25" |  |  | checklistAPI.getChecklistsByDate, Checklist.tsx (ChecklistCard) | H |
+| 37 | 실시간 채팅 |  |  |  |  |  |  | _ |  |
+| 37.1 |  | 사용자는 스터디룸 내에서 다른 참여자들과 실시간으로 메시지를 주고받을 수 있다. |  |  |  |  |  | _ |  |
+| 37.1.1 |  |  | 텍스트 메시지 입력 후 전송 버튼을 누르면 모든 참여자에게 즉시 표시된다. | "새로고침" 버튼 |  |  |  | handleRefresh, fetchRooms, RefreshCw 아이콘 | L |
+| 37.1.2 |  |  | 이미지 파일(jpg, png, gif, webp)을 첨부하여 전송할 수 있다. | "새로고침" 버튼 |  |  |  | handleRefresh, fetchGroups, RefreshCw 아이콘 | L |
+| 37.1.3 |  |  | 이미지 파일은 10MB를 초과할 수 없으며, 초과 시 "이미지 크기는 10MB를 초과할 수 없습니다" 메시지를 표시한다. | imageFile | imageFile="small.png" (3MB) | imageFile="large.png" (12MB) |  | file.size 검증, toast 알림 | L |
+| 37.1.4 |  |  | 질문 버튼을 눌러 질문 모드로 전환할 수 있으며, 질문 모드에서는 입력창에 "질문 모드" 표시가 나타난다. | "질문" 버튼 |  |  |  | setIsQuestionMode(true), HelpCircle 아이콘, Badge 컴포넌트 | H |
+| 37.1.5 |  |  | 질문으로 등록된 메시지는 일반 채팅과 구분되어 빨간색 테두리로 강조 표시된다. |  |  |  |  | message.type === "QUESTION", className border-l-4 border-red-500 | M |
+| 37.1.6 |  |  | 다른 참여자가 등록한 질문에 대해 답변을 작성할 수 있다. | answer(답변), "답변 전송" 버튼 | answer="이렇게 하면 됩니다" | answer="" |  | handleSubmitAnswer, webSocketService.sendMessage(type: "ANSWER") | M |
+| 37.1.7 |  |  | 질문 작성자는 답변 중 하나를 채택하여 "해결됨" 상태로 변경할 수 있다. | "채택" 버튼 | isQuestionOwner=true | isQuestionOwner=false |  | handleAcceptAnswer, chatAPI.solveQuestion, PATCH /api/chat/message/{id}/solve | M |
+| 37.1.8 |  |  | 본인이 작성한 질문만 삭제할 수 있으며, 삭제 시 관련 답변도 함께 삭제된다. | "삭제" 버튼 | isQuestionOwner=true | isQuestionOwner=false |  | handleDeleteQuestion, chatAPI.deleteMessage, DELETE /api/chat/message/{id} | M |
+| 37.1.9 |  |  | 미해결 질문 개수가 화면 상단에 표시되며, 클릭 시 미해결 질문 목록을 팝오버로 확인할 수 있다. | "질문 N개" 버튼 |  |  |  | Popover 컴포넌트, messages.filter(m => m.type === "QUESTION" && m.status === "open") | M |
+| 37.1.10 |  |  | 채팅 메시지는 하단에 최신 메시지가 표시되도록 자동 스크롤된다. |  |  |  |  | useEffect scrollIntoView, chatEndRef, behavior: "smooth" | H |
