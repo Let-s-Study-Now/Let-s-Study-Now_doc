@@ -6,7 +6,7 @@
 
 ## DB Class Diagram
 
-<img width="2000" height="2000" alt="Image" src="images/ClassDiagram_1.png" />
+<img width="2000" height="2000" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_1.png?raw=true" />
 
 ### MemberRepository
 
@@ -93,7 +93,7 @@
 
 ## 3.2 DTO Class diagram
 
-<img width="2342" height="1134" alt="Image" src="images/ClassDiagram_2.png" />
+<img width="2342" height="1134" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_2.png?raw=true" />
 
 ### RegisterDto
 
@@ -206,7 +206,7 @@
 
 ## 3.3 인증/보안 Class diagram
 
-<img width="3860" height="1836" alt="Image" src="images/ClassDiagram_3.png" />
+<img width="3860" height="1836" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_3.png?raw=true" />
 
 ### CustomUser
 
@@ -305,7 +305,7 @@
 
 ## 3.4 오픈 스터디 기능 Class diagram
 
-<img width="9110" height="2870" alt="Image" src="images/ClassDiagram_4.png" />
+<img width="9110" height="2870" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_4.png?raw=true" />
 
 ### OpenStudyRoomController
 
@@ -467,7 +467,7 @@
 
 ### 3.5.1 Domain
 
-<img width="1360" height="2680" alt="Image" src="images/ClassDiagram_5.png" />
+<img width="1360" height="2680" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_5.png?raw=true" />
 
 #### Group (Entity)
 
@@ -553,7 +553,7 @@
 
 ### 3.5.2 DTO
 
-<img width="3600" height="7000" alt="Image" src="images/ClassDiagram_6.png" />
+<img width="3600" height="7000" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_6.png?raw=true" />
 
 #### AddGroupMemberRequest
 
@@ -619,7 +619,7 @@
 
 ### 3.5.3 Services
 
-<img width="6042" height="828" alt="Image" src="images/ClassDiagram_7.png" />
+<img width="6042" height="828" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_7.png?raw=true" />
 
 #### GroupService
 
@@ -662,7 +662,7 @@
 
 ### 3.5.4 Controllers
 
-<img width="4706" height="786" alt="Image" src="images/ClassDiagram_8.png" />
+<img width="4706" height="786" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_8.png?raw=true" />
 
 #### GroupController
 
@@ -698,7 +698,7 @@
 
 ### 3.5.5 Repositories
 
-<img width="5868" height="702" alt="Image" src="images/ClassDiagram_9.png" />
+<img width="5868" height="702" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_9.png?raw=true" />
 
 #### GroupRepository
 
@@ -737,7 +737,7 @@
 
 ## 3.6 체크리스트 Class diagram
 
-<img width="4823" height="2772" alt="Image" src="images/ClassDiagram_10.png" />
+<img width="4823" height="2772" alt="Image" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/ClassDiagram_10.png?raw=true" />
 
 **Description:** 체크리스트 도메인의 구조와 주요 동작을 한눈에 정리한다.
 
@@ -842,7 +842,7 @@
 
 **타이머 Entity 다이어그램**
 
-<img width="2000" alt="Timer Entity Diagram" src="images/Timer_Entity_Diagram.png" />
+<img width="2000" alt="Timer Entity Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Timer_Entity_Diagram.png?raw=true" />
 
 #### PersonalTimer
 **Class Description:** 개인 타이머 엔티티. 사용자의 공부 시간을 실시간으로 측정하고 관리하는 Class
@@ -951,7 +951,7 @@
 
 **타이머 DTO 다이어그램**
 
-<img width="2000" alt="Timer DTO Diagram" src="images/Timer_DTO_Diagram.png" />
+<img width="2000" alt="Timer DTO Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Timer_DTO_Diagram.png?raw=true" />
 
 #### PomodoroSettingRequest
 **Class Description:** 뽀모도로 설정 요청 DTO. 공부/휴식 시간을 설정할 때 사용하는 Class
@@ -1043,7 +1043,7 @@
 
 **타이머 Service 다이어그램**
 
-<img width="2000" alt="Timer Service Diagram" src="images/Timer_Service_Diagram.png" />
+<img width="2000" alt="Timer Service Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Timer_Service_Diagram.png?raw=true" />
 
 #### PersonalTimerService
 **Class Description:** 개인 타이머 비즈니스 로직을 처리하는 Service Class
@@ -1095,7 +1095,7 @@
 
 **타이머 Controller 다이어그램**
 
-<img width="2000" alt="Timer Controller Diagram" src="images/Timer_Controller_Diagram.png" />
+<img width="2000" alt="Timer Controller Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Timer_Controller_Diagram.png?raw=true" />
 
 #### PersonalTimerController
 **Class Description:** 개인 타이머 API 엔드포인트를 제공하는 Controller Class
@@ -1128,7 +1128,7 @@
 
 **타이머 Repository 다이어그램**
 
-<img width="2000" alt="Timer Repository Diagram" src="images/Timer_Repository_Diagram.png" />
+<img width="2000" alt="Timer Repository Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Timer_Repository_Diagram.png?raw=true" />
 
 #### PersonalTimerRepository
 **Class Description:** PersonalTimer 엔티티용 repository, 사용자/방 기준 조회 기능을 제공하는 Class
@@ -1183,7 +1183,7 @@
 
 **채팅 Entity 다이어그램**
 
-<img width="2000" alt="Chat Entity Diagram" src="images/Chat_Entity_Diagram.png" />
+<img width="2000" alt="Chat Entity Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Chat_Entity_Diagram.png?raw=true" />
 
 #### ChatMessage
 **Class Description:** 채팅 메시지 엔티티. 스터디방의 채팅 메시지를 저장하고 관리하는 Class
@@ -1245,7 +1245,7 @@
 
 **채팅 DTO 다이어그램**
 
-<img width="2000" alt="Chat DTO Diagram" src="images/Chat_DTO_Diagram.png" />
+<img width="2000" alt="Chat DTO Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Chat_DTO_Diagram.png?raw=true" />
 
 #### ChatMessageRequest
 **Class Description:** 채팅 메시지 요청 DTO. 클라이언트가 메시지를 전송할 때 사용하는 Class
@@ -1307,7 +1307,7 @@
 
 **채팅 Service 다이어그램**
 
-<img width="2000" alt="Chat Service Diagram" src="images/Chat_Service_Diagram.png" />
+<img width="2000" alt="Chat Service Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Chat_Service_Diagram.png?raw=true" />
 
 #### ChatService
 **Class Description:** 채팅 비즈니스 로직을 처리하는 Service Class
@@ -1334,7 +1334,7 @@
 
 **채팅 Controller 다이어그램**
 
-<img width="2000" alt="Chat Controller Diagram" src="images/Chat_Controller_Diagram.png" />
+<img width="2000" alt="Chat Controller Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Chat_Controller_Diagram.png?raw=true" />
 
 #### ChatController
 **Class Description:** 채팅 API 및 WebSocket 엔드포인트를 제공하는 Controller Class
@@ -1363,7 +1363,7 @@
 
 **채팅 Repository 다이어그램**
 
-<img width="2000" alt="Chat Repository Diagram" src="images/Chat_Repository_Diagram.png" />
+<img width="2000" alt="Chat Repository Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Chat_Repository_Diagram.png?raw=true" />
 
 #### ChatRepository
 **Class Description:** ChatMessage 엔티티용 repository, 방별 메시지 조회 기능을 제공하는 Class
@@ -1384,7 +1384,7 @@
 
 **스터디 세션 Entity 다이어그램**
 
-<img width="2000" alt="Session Entity Diagram" src="images/Session_Entity_Diagram.png" />
+<img width="2000" alt="Session Entity Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Session_Entity_Diagram.png?raw=true" />
 
 #### StudySession
 **Class Description:** 공부 세션 엔티티. 회원이 스터디방에서 공부한 시간을 기록하고 관리하는 Class
@@ -1417,7 +1417,7 @@
 
 **스터디 세션 DTO 다이어그램**
 
-<img width="2000" alt="Session DTO Diagram" src="images/Session_DTO_Diagram.png" />
+<img width="2000" alt="Session DTO Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Session_DTO_Diagram.png?raw=true" />
 
 #### SessionStartRequestDto
 **Class Description:** 세션 시작 요청 DTO. 공부 세션 시작 시 사용하는 Class
@@ -1503,7 +1503,7 @@
 
 **스터디 세션 Service 다이어그램**
 
-<img width="2000" alt="Session Service Diagram" src="images/Session_Service_Diagram.png" />
+<img width="2000" alt="Session Service Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Session_Service_Diagram.png?raw=true" />
 
 #### StudySessionService
 **Class Description:** 공부 세션 관리 서비스. Timer와 연동하여 실제 공부 시간을 측정하고 레벨업 처리하는 Class
@@ -1551,7 +1551,7 @@
 
 **스터디 세션 Controller 다이어그램**
 
-<img width="2000" alt="Session Controller Diagram" src="images/Session_Controller_Diagram.png" />
+<img width="2000" alt="Session Controller Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Session_Controller_Diagram.png?raw=true" />
 
 #### StudySessionController
 **Class Description:** 공부 세션 및 레벨업 API 엔드포인트를 제공하는 Controller Class
@@ -1578,7 +1578,7 @@
 
 **스터디 세션 Repository 다이어그램**
 
-<img width="2000" alt="Session Repository Diagram" src="images/Session_Repository_Diagram.png" />
+<img width="2000" alt="Session Repository Diagram" src="https://github.com/Let-s-Study-Now/Let-s-Study-Now_doc/blob/main/SDS/3.%20Class%20diagram/images/Session_Repository_Diagram.png?raw=true" />
 
 #### StudySessionRepository
 **Class Description:** StudySession 엔티티용 repository, 회원별 활성 세션 조회 기능을 제공하는 Class
